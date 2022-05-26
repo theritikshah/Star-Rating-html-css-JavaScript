@@ -1,0 +1,180 @@
+:root {
+    --accent: hsl(25, 97%, 53%);
+--White: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+--icon-Background: rgb(38,47,56);
+font-size: 10px;
+}
+
+body{
+
+   
+    background-color: var(--Very-Dark-Blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+}
+
+h1{
+
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+p{
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--Light-Grey);
+}
+
+
+
+.button--accent{
+
+    
+    background-color: var(--accent) ;
+    border: none;
+   
+    border-radius: 100px;
+    padding: 14px 20px;
+    font-size: 1.8rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.button--accent:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+/* MODAL */
+
+.icon--round {
+    background-color: var(--icon-Background);
+    padding: 1rem;
+    border-radius: 100%;
+
+}
+
+.close:hover{
+   transition: transform 0.3s;
+   transform: scale(1.4);
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+.rating-modal{
+    width: 30%;
+    background: rgb(35,42,52);
+background: linear-gradient(180deg, rgba(35,42,52,1) 0%, rgba(23,30,40,1) 100%);
+    border-radius: 25px;
+    padding: 4rem;
+
+}
+
+.rating-modal h1{
+    color: white;
+    font-weight: 700;
+}
+
+
+ .modal , .rating-modal {
+    visibility: visible;
+    -webkit-animation: fadeIn .11s;
+    animation: fadeIn .11s;
+   
+  }
+
+  .rating-modal{
+    -webkit-animation: ZoomIn 0.30s ease-in;
+    animation: ZoomIn 0.30s ease-in;
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+  @keyframes ZoomIn {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+  }
+  @-webkit-keyframes ZoomIn {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+  }
+
+
+  /* Rating Nums */
+
+  .rating-scale {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+  }
+
+  .rate-number{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transition: transform 0.1s ease-in;
+    color: white;
+    font-size: 15px;
+  }
+
+  .rate-number:hover {
+    background-color: var(--accent);
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+
+.rateCount{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  width: fit-content;
+  background-color:var(--icon-Background);
+  font-size: 1.5rem;
+  border-radius: 50px;
+  padding: 9px 24px;
+}
+
+.numSelected{
+  background-color: var(--accent);
+  border: 4px solid white;
+  box-shadow: 1px 2px 10px black;
+}
